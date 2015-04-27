@@ -6,7 +6,8 @@ module.exports = function ( config ) {
 
     basePath: '',
 
-    browsers: [ 'PhantomJS' ],
+    browsers: [ 'Chrome' ],
+    //browsers: [ 'PhantomJS' ],
 
     //browserDisconnectTimeout: 10 * 1000, // 10s
     //browserDisconnectTolerance: 2,
