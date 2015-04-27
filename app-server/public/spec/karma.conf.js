@@ -9,21 +9,6 @@ module.exports = function ( config ) {
     browsers: [ 'Chrome' ],
     //browsers: [ 'PhantomJS' ],
 
-    //browserDisconnectTimeout: 10 * 1000, // 10s
-    //browserDisconnectTolerance: 2,
-    //browserNoActivityTimeout: 2 * 60 * 1000, // 2m
-    //captureTimeout: 0,
-
-    //babelPreprocessor: {
-    //  options: {
-    //    sourceMap: 'inline',
-    //    compact: false
-    //  },
-    //  sourceFileName: function(file) {
-    //    return file.originalPath;
-    //  }
-    //},
-
     exclude: [
     ],
 
@@ -31,17 +16,6 @@ module.exports = function ( config ) {
 
     files: [
     ],
-
-    //jspm: {
-    //  loadFiles: [
-    //    filePathPrepend + '/lib/mithril/mithril.min.js',
-    //    filePathPrepend + '/src/**/*.spec.js'
-    //  ],
-    //  serveFiles: [
-    //    filePathPrepend + '/**/src/**/*.js',
-    //    filePathPrepend + '/index.html'
-    //  ]
-    //},
 
     jspm: {
       loadFiles: [
@@ -62,18 +36,6 @@ module.exports = function ( config ) {
     preprocessors: {
       '/app-server/public/app/src/**/*.js': [ 'babel' ]
     },
-
-    proxies: {
-      '/jspm_packages/': '/base/jspm_packages/'
-    },
-
-    //proxies: {
-    //  '/': 'http://localhost:8086/'
-    //},
-
-    //proxies: {
-    //  'jspm_packages/': filePathPrepend + '/base/www/jspm_packages/'
-    //},
 
     reporters: [ 'progress' ]
 
