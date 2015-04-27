@@ -8,20 +8,20 @@ module.exports = function ( config ) {
 
     browsers: [ 'PhantomJS' ],
 
-    browserDisconnectTimeout: 10 * 1000, // 10s
-    browserDisconnectTolerance: 2,
-    browserNoActivityTimeout: 2 * 60 * 1000, // 2m
-    captureTimeout: 0,
+    //browserDisconnectTimeout: 10 * 1000, // 10s
+    //browserDisconnectTolerance: 2,
+    //browserNoActivityTimeout: 2 * 60 * 1000, // 2m
+    //captureTimeout: 0,
 
-    babelPreprocessor: {
-      options: {
-        sourceMap: 'inline',
-        compact: false
-      },
-      sourceFileName: function(file) {
-        return file.originalPath;
-      }
-    },
+    //babelPreprocessor: {
+    //  options: {
+    //    sourceMap: 'inline',
+    //    compact: false
+    //  },
+    //  sourceFileName: function(file) {
+    //    return file.originalPath;
+    //  }
+    //},
 
     exclude: [
     ],
@@ -29,18 +29,26 @@ module.exports = function ( config ) {
     frameworks: [ 'jspm', 'jasmine' ],
 
     files: [
-      //'./node_modules/phantomjs-polyfill/bind-polyfill.js'
-      //filePathPrepend + '/lib/mithril/mithril.min.js',
-      //filePathPrepend + '/src/**/*.js'
     ],
+
+    //jspm: {
+    //  loadFiles: [
+    //    filePathPrepend + '/lib/mithril/mithril.min.js',
+    //    filePathPrepend + '/src/**/*.spec.js'
+    //  ],
+    //  serveFiles: [
+    //    filePathPrepend + '/**/src/**/*.js',
+    //    filePathPrepend + '/index.html'
+    //  ]
+    //},
 
     jspm: {
       loadFiles: [
+        //'./node_modules/phantomjs-polyfill/bind-polyfill.js',
         filePathPrepend + '/lib/mithril/mithril.min.js',
-        filePathPrepend + '/src/**/*.spec.js'
+        filePathPrepend + '/src/**/*.{js,spec.js}'
       ],
       serveFiles: [
-        filePathPrepend + '/**/src/**/*.js',
         filePathPrepend + '/index.html'
       ]
     },

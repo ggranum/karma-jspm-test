@@ -3,17 +3,11 @@
 var gulp = require ( 'gulp' );
 var karma = require ( 'karma' );
 
-// Convenience vars
-//var paths = {};
-//paths.rootPath = './app-server/public/';
-//paths.appRootPath = paths.rootPath + '/app';
-//paths.distRootPath = paths.rootPath + '/dist';
-//paths.cssSrc = paths.appRootPath + '/css/**/*.css';
-//paths.cssOut = paths.distRootPath + '/css';
-//paths.jsSrc = paths.appRootPath + '/src/**/*.js';
-//paths.jsOut = paths.distRootPath + '/src';
+// Gulp 4.0 syntax
+//gulp.task ( 'unit', gulp.series ( unit ) );
 
-gulp.task ( 'unit', gulp.series ( unit ) );
+// Gulp 3.x syntax
+gulp.task ( 'unit',  unit );
 
 
 function unit ( done ) {

@@ -6,3 +6,4 @@ describe ( 'Test 2', function () {
     expect ( t2.getName() ).toBe ( 'Jerry' );
   });
 });
+
